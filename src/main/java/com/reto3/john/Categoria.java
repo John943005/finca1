@@ -30,7 +30,7 @@ class Categoria implements Serializable {
     private String description;
     
     @OneToMany(cascade = {CascadeType.PERSIST},mappedBy="category")
-    @JsonIgnoreProperties({"category","message"})
+    @JsonIgnoreProperties("category")
     private List<Finca> farms;
 
     public Integer getId() {
